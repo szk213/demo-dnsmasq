@@ -1,0 +1,15 @@
+version: '3'
+services:
+  dnsmasq:
+    container_name: dnsmasq
+    build:
+      context: ./docker-dnsmasq
+    restart: always
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+    extra_hosts: 
+      - "test.szk213.com:192.30.252.154"
+    cap_add:
+      - NET_ADMIN
+  
