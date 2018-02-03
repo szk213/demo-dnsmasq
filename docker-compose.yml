@@ -12,4 +12,8 @@ services:
       - "test.szk213.com:192.30.252.154"
     cap_add:
       - NET_ADMIN
+    networks:
+     backend:
+networks:
+  backend:
   
